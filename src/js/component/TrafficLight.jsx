@@ -23,7 +23,10 @@ const TrafficLight = () => {
         onClick={() => setColor("green")}
         className={"light green" + (color === "green" ? " glow" : "")}
       ></div>
-    </div>
+	  <button className="button" onClick={() => setColor()}>Change</button>
+	  </div>
+    
+	
   );
 };
 
