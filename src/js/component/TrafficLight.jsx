@@ -6,7 +6,17 @@ import rigoImage from "../../img/rigo-baby.jpg";
 //create your first component
 const TrafficLight = () => {
   const [color, setColor] = useState("red");
-
+  const handleChange=()=>{
+    if(color==="red"){
+      setColor("yellow")
+    }
+    if(color==="yellow"){
+      setColor("green")
+    }
+    if(color==="green"){
+      setColor("red")
+    }
+  }
   return (
     <div className="traficlight">
       <div
@@ -23,7 +33,7 @@ const TrafficLight = () => {
         onClick={() => setColor("green")}
         className={"light green" + (color === "green" ? " glow" : "")}
       ></div>
-	  <button className="button" onClick={() => setColor()}>Change</button>
+	  <button className="button" onClick={() => handleChange()}>Change</button>
 	  </div>
     
 	
