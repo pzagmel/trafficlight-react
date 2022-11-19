@@ -7,14 +7,15 @@ import rigoImage from "../../img/rigo-baby.jpg";
 const TrafficLight = () => {
   const [color, setColor] = useState("red");
   const handleChange=()=>{
-    if(color==="red"){
+   
+    if(color==="green"){
       setColor("yellow")
     }
     if(color==="yellow"){
-      setColor("green")
-    }
-    if(color==="green"){
       setColor("red")
+    }
+    if(color==="red"){
+      setColor("green")
     }
   }
   return (
