@@ -8,14 +8,14 @@ const TrafficLight = () => {
   const [color, setColor] = useState("red");
   const handleChange=()=>{
    
+    if(color==="red"){
+      setColor("green")
+    }
     if(color==="green"){
       setColor("yellow")
     }
     if(color==="yellow"){
       setColor("red")
-    }
-    if(color==="red"){
-      setColor("green")
     }
   }
   return (
